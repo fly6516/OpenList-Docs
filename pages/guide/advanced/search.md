@@ -169,7 +169,7 @@ services:
       - /tmp/data/Docker/meilisearch/meili_data:/meili_data
     command: meilisearch --schedule-snapshot --snapshot-dir /meili_data/snapshots
     environment:
-      - MEILI_MASTER_KEY=Replace_this_with_your_secret_key
+      - MEILI_MASTER_KEY=your_master_key_here
     tty: true
     stdin_open: true
     networks:
@@ -220,7 +220,7 @@ services:
       - /tmp/data/Docker/meilisearch/meili_data:/meili_data
     command: meilisearch --schedule-snapshot --snapshot-dir /meili_data/snapshots
     environment:
-      - MEILI_MASTER_KEY=Replace_this_with_your_secret_key
+      - MEILI_MASTER_KEY=your_master_key_here
     tty: true
     stdin_open: true
     networks:
@@ -235,7 +235,7 @@ networks:
 设置解释：
 
 - `UMASK`: 设置文件权限
-- `getmeili/meilisearch:v1.16`: 官方建议使用固定的版本编号(本文策划时最新版本为`v1.16`),您可以自行从[官网本地部署docs](https://www.meilisearch.com/docs/learn/self_hosted/install_meilisearch_locally)查询最新版本。
+- `getmeili/meilisearch:v1.16`: 官方建议使用固定的版本编号(本文撰写时最新版本为`v1.16`),您可以自行从[官网本地部署docs](https://www.meilisearch.com/docs/learn/self_hosted/install_meilisearch_locally)查询最新版本。
 - 有关meilisearch的其他参数可以通过[官网本地部署docs](https://www.meilisearch.com/docs/learn/self_hosted/install_meilisearch_locally)自行修改或采用其他方式部署。
 
 :::
@@ -272,7 +272,7 @@ Edit the section below, filling in the IP address and port of your MeiliSearch i
 ```json
   "meilisearch": {
     "host": "http://meilisearch:7700",
-    "api_key": "Replace_this_with_your_secret_key",
+    "api_key": "your_master_key_here",
     "index": "openlist"
   },
 ```
@@ -293,7 +293,7 @@ Next, open the management panel, click `Indexes`, select `meilisearch`, and clic
 ```json
   "meilisearch": {
     "host": "http://meilisearch:7700",
-    "api_key": "Replace_this_with_your_secret_key",
+    "api_key": "your_master_key_here",
     "index": "openlist"
   },
 ```
